@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Default to the gsfapi 'Development' configuration so the local Gemstone
+    source projects (in C:\Projects\gemstone\*) are used as ProjectReferences
+    instead of the older NuGet versions.
+
+    The sttp.gemstone csproj has:
+      - Debug/Release  -> PackageReference to Gemstone.* 1.0.172 (often stale)
+      - Development    -> ProjectReference to ..\..\..\..\..\gemstone\* (live source)
+
+    So always build / run this with Configuration=Development to get a fully
+    debuggable, in-source view of the publisher pipeline.
+  -->
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Development</Configuration>
+    <Configurations>Debug;Release;Development</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SttpInteropTest</RootNamespace>
+    <AssemblyName>SttpInteropPublisher</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Development'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <!--
+    Project reference into the local gsfapi sources so we can step into
+    DataPublisher / SubscriberAdapter / TsscEncoder while debugging.
+
+    The sttp.gemstone csproj transitively brings in Gemstone.Common,
+    Gemstone.Timeseries, Gemstone.Diagnostics, etc. (as ProjectReferences in
+    Development configuration), so we do not list them again here.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\gsfapi\src\lib\sttp.gemstone\sttp.gemstone.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+<Project>
+  <!--
+    Force Configuration=Development by default for everything under test-interop/.
+    The gsfapi sttp.gemstone project uses ProjectReferences to local Gemstone source
+    only in Development; Debug/Release fall back to NuGet packages that may be stale
+    relative to the live source code. Without this, `dotnet build` would default to
+    Debug and fail to compile the live sttp.core code.
+  -->
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Development</Configuration>
+  </PropertyGroup>
+</Project>

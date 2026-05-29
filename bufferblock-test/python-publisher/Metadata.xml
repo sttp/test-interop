@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<NewDataSet xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="NewDataSet">
+    <xs:element name="NewDataSet" ns1:IsDataSet="true" ns1:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DeviceDetail">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="UniqueID" ns1:DataType="System.Guid" type="xs:string" minOccurs="0" />
+                <xs:element name="OriginalSource" type="xs:string" minOccurs="0" />
+                <xs:element name="IsConcentrator" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Acronym" type="xs:string" minOccurs="0" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="AccessID" type="xs:int" minOccurs="0" />
+                <xs:element name="ParentAcronym" type="xs:string" minOccurs="0" />
+                <xs:element name="ProtocolName" type="xs:string" minOccurs="0" />
+                <xs:element name="FramesPerSecond" type="xs:int" minOccurs="0" />
+                <xs:element name="CompanyAcronym" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorAcronym" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorDeviceName" type="xs:string" minOccurs="0" />
+                <xs:element name="Longitude" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Latitude" type="xs:decimal" minOccurs="0" />
+                <xs:element name="InterconnectionName" type="xs:string" minOccurs="0" />
+                <xs:element name="ContactList" type="xs:string" minOccurs="0" />
+                <xs:element name="Enabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="UpdatedOn" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="MeasurementDetail">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="DeviceAcronym" type="xs:string" minOccurs="0" />
+                <xs:element name="ID" type="xs:string" minOccurs="0" />
+                <xs:element name="SignalID" ns1:DataType="System.Guid" type="xs:string" minOccurs="0" />
+                <xs:element name="PointTag" type="xs:string" minOccurs="0" />
+                <xs:element name="SignalReference" type="xs:string" minOccurs="0" />
+                <xs:element name="SignalAcronym" type="xs:string" minOccurs="0" />
+                <xs:element name="PhasorSourceIndex" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Internal" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Enabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="UpdatedOn" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="PhasorDetail">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID" type="xs:int" minOccurs="0" />
+                <xs:element name="DeviceAcronym" type="xs:string" minOccurs="0" />
+                <xs:element name="Label" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Phase" type="xs:string" minOccurs="0" />
+                <xs:element name="DestinationPhasorID" type="xs:int" minOccurs="0" />
+                <xs:element name="SourceIndex" type="xs:int" minOccurs="0" />
+                <xs:element name="UpdatedOn" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="SchemaVersion">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="VersionNumber" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <DeviceDetail>
+    <UniqueID>11223344-5566-7788-99aa-bbccddeeff00</UniqueID>
+    <IsConcentrator>0</IsConcentrator>
+    <Acronym>BBTEST_PY</Acronym>
+    <Name>BufferBlockTestPython</Name>
+    <AccessID>0</AccessID>
+    <ParentAcronym />
+    <ProtocolName>STTP</ProtocolName>
+    <FramesPerSecond>1</FramesPerSecond>
+    <CompanyAcronym>GPA</CompanyAcronym>
+    <VendorAcronym />
+    <VendorDeviceName />
+    <Longitude>0.0</Longitude>
+    <Latitude>0.0</Latitude>
+    <InterconnectionName />
+    <ContactList />
+    <Enabled>1</Enabled>
+    <UpdatedOn>2026-05-29T00:00:00.000-00:00</UpdatedOn>
+  </DeviceDetail>
+  <MeasurementDetail>
+    <DeviceAcronym>BBTEST_PY</DeviceAcronym>
+    <ID>BBTEST_PY:1</ID>
+    <SignalID>deadbeef-1111-2222-3333-444455556666</SignalID>
+    <PointTag>BUFFERBLOCK_PY</PointTag>
+    <SignalReference>BBTEST_PY-CV1</SignalReference>
+    <SignalAcronym>CALC</SignalAcronym>
+    <Description>Buffer block measurement emitted by pyapi publisher</Description>
+    <Internal>true</Internal>
+    <Enabled>true</Enabled>
+    <UpdatedOn>2026-05-29T00:00:00.000-00:00</UpdatedOn>
+  </MeasurementDetail>
+  <SchemaVersion>
+    <VersionNumber>1</VersionNumber>
+  </SchemaVersion>
+</NewDataSet>

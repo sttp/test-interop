@@ -1,0 +1,83 @@
+# ============================================================
+# C# / .NET
+# ============================================================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.vsidx
+*.vsp
+*.vspx
+*.lock.json
+project.lock.json
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+[Pp]ublish/
+[Rr]elease/
+[Dd]ebug/
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+*.log
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+pip-log.txt
+pip-delete-this-directory.txt
+*.pot
+*.mo
+
+# ============================================================
+# Common / OS
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/settings.json
