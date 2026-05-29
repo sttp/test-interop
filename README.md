@@ -1,6 +1,6 @@
 # STTP Interoperability Test Suite
 
-This repository contains interoperability test harnesses for validating the IEEE 2664-2024 (STTP) protocol implementation across different language implementations: **gsfapi** (C# / .NET) and **pyapi** (Python).
+This repository contains interoperability test harnesses for validating the IEEE 2664-2024 (STTP) protocol implementation across different language implementations, e.g., **gsfapi** (C# / .NET) and **pyapi** (Python).
 
 ## Purpose
 
